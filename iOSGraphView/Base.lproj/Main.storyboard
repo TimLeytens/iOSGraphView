@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testpath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSGraphView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,17 +26,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Fg-9ai">
-                                <rect key="frame" x="155.5" y="597" width="64" height="30"/>
+                                <rect key="frame" x="155.5" y="467" width="64" height="30"/>
                                 <state key="normal" title="Generate"/>
                                 <connections>
                                     <action selector="generate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoI-Tb-reu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-J6-BBj">
-                                <rect key="frame" x="151.5" y="543" width="72" height="30"/>
-                                <state key="normal" title="Add 1 item"/>
-                                <connections>
-                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HgS-K9-eXp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NPX-R6-SMl">
@@ -50,20 +43,45 @@
                                     <action selector="switchColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="euQ-Qr-JP1"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rD-JE-qCX">
+                                <rect key="frame" x="170.5" y="567" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQ6-fC-GTA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-kc-VPE">
+                                <rect key="frame" x="171.5" y="617" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SaG-fc-tfh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-J6-BBj">
+                                <rect key="frame" x="151.5" y="517" width="72" height="30"/>
+                                <state key="normal" title="Add 1 item"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HgS-K9-eXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BuL-J6-BBj" firstAttribute="top" secondItem="01t-Fg-9ai" secondAttribute="bottom" constant="20" id="5Ti-8w-22N"/>
                             <constraint firstItem="NPX-R6-SMl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Azn-67-feg"/>
+                            <constraint firstItem="5rD-JE-qCX" firstAttribute="top" secondItem="BuL-J6-BBj" secondAttribute="bottom" constant="20" id="Erd-9J-0JO"/>
                             <constraint firstItem="NPX-R6-SMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QJT-hD-iv0"/>
+                            <constraint firstItem="Vas-kc-VPE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDc-HM-Kch"/>
                             <constraint firstItem="VJY-95-AhP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Y3c-97-Hlj"/>
                             <constraint firstItem="BuL-J6-BBj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZsE-R3-B2s"/>
                             <constraint firstItem="01t-Fg-9ai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fPe-wR-apF"/>
+                            <constraint firstItem="Vas-kc-VPE" firstAttribute="top" secondItem="5rD-JE-qCX" secondAttribute="bottom" constant="20" id="fWH-AW-wdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vas-kc-VPE" secondAttribute="bottom" constant="20" id="hgb-PW-xol"/>
+                            <constraint firstItem="5rD-JE-qCX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixV-b9-x37"/>
                             <constraint firstItem="VJY-95-AhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qfA-1F-hxu"/>
-                            <constraint firstItem="01t-Fg-9ai" firstAttribute="top" secondItem="BuL-J6-BBj" secondAttribute="bottom" constant="24" id="x0Z-vh-feq"/>
                             <constraint firstItem="BuL-J6-BBj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xcE-Hn-ck4"/>
                             <constraint firstItem="VJY-95-AhP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xy7-ee-rnz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VJY-95-AhP" secondAttribute="trailing" constant="10" id="yHa-Y4-euo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="01t-Fg-9ai" secondAttribute="bottom" constant="40" id="yb5-Q6-7Du"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     private var min = 0
     private var max = 0
     private var colorIndex = 0
+    private var timer = Timer()
 
     @IBAction func generate(_ sender: UIButton? = nil) {
         var values = [Int]()
@@ -31,13 +32,23 @@ class ViewController: UIViewController {
         drawGraph()
     }
     
-    @IBAction func addItem(_ sender: UIButton) {
+    @IBAction func addItem(_ sender: UIButton? = nil) {
         var values = self.values
         values.remove(at: 0)
         values.append(Int.random(in: 10 ..< 20))
         self.values = values
         drawGraph()
     }
+    
+    @IBAction func start(_ sender: Any? = nil) {
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(addItem), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func stop(_ sender: Any? = nil) {
+        timer.invalidate()
+    }
+    
     
     @IBAction func switchColor(_ sender: UISegmentedControl) {
         colorIndex = sender.selectedSegmentIndex
