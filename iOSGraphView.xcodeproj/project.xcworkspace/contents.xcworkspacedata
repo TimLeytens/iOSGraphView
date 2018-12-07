@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:testpath.xcodeproj">
+      location = "self:/Users/tim/Projects/testpath/iOSGraphView.xcodeproj">
    </FileRef>
 </Workspace>
